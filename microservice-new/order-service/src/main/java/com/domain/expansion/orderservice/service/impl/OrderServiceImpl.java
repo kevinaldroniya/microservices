@@ -10,6 +10,7 @@ import com.domain.expansion.orderservice.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
 
 import java.util.List;
 import java.util.UUID;
@@ -20,6 +21,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private OrderRepository orderRepository;
+
+    @Autowired
+    private WebClient webClient;
 
     @Override
     public void placeOrder(OrderRequest orderRequest) {
@@ -33,7 +37,25 @@ public class OrderServiceImpl implements OrderService {
 
         order.setOrderLineItemsList(orderLineItems);
 
-        orderRepository.save(order);
+        List<String> skuCodes = order.getOrderLineItemsList().stream()
+                .map(OrderLineItems::getSkuCode)
+                .toList();
+
+        //Call inventory service, and place order if product is in stock
+        Boolean result = webClient.get()
+                .uri("http://localhost:8082/api/inventory",
+                        uriBuilder -> uriBuilder.queryParam("skuCodes",skuCodes).build())
+                .retrieve()
+                .bodyToMono(Boolean.class)
+                .block();
+
+        if(result){
+            orderRepository.save(order);
+        }else {
+            throw new IllegalArgumentException("Product is not in stock, please try again later");
+        }
+
+
     }
 
     private OrderLineItems mapToDto(OrderLineItemsDto orderLineItemsDto) {
