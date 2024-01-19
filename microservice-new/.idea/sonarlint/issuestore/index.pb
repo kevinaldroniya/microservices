@@ -45,3 +45,7 @@ cdiscovery-server/src/main/java/com/domain/expansion/discoveryserver/DiscoverySe
 cproduct-service/src/main/java/com/domain/expansion/productservice/controller/ProductController.java,a\d\adbdc85eeb46a29fba4df29d7ac6afc26c2d32b7
 w
 G.idea/sonarlint/issuestore/2/c/2c58c7878e43d126fc56cae853d5b06de57d0b3e,2\a\2aea538fa842ab410c535ca5a62d4e486793586f
+C
+api-gateway/pom.xml,2\b\2bfa2b108f2439e99e004f4085b58c22cf995f73
+„
+Tapi-gateway/src/main/java/com/domain/expansion/apigateway/ApiGatewayApplication.java,1\6\16629942f8b50576900badcb9165d62508455884
