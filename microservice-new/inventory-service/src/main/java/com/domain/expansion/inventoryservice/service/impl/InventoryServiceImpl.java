@@ -1,5 +1,6 @@
 package com.domain.expansion.inventoryservice.service.impl;
 
+import com.domain.expansion.inventoryservice.dto.InventoryAllResponse;
 import com.domain.expansion.inventoryservice.dto.InventoryResponse;
 import com.domain.expansion.inventoryservice.repository.InventoryRepository;
 import com.domain.expansion.inventoryservice.service.InventoryService;
@@ -37,4 +38,16 @@ public class InventoryServiceImpl implements InventoryService {
                                 .build()
                         ).toList();
     }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<InventoryAllResponse> getInventories() {
+        return inventoryRepository.findAll()
+                .stream()
+                .map(
+                        inventory -> InventoryAllResponse.builder().quantity(inventory.getQuantity()).skuCode(inventory.getSkuCode()).build()
+                ).toList();
+    }
+
+
 }
