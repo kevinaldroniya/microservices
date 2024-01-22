@@ -1,0 +1,14 @@
+
+_
+java:S1874"BRemove this use of "withDefaultPasswordEncoder"; it is deprecated.(¿•¿8Ìô†ûÒ1
+O
+java:S1611+"3Remove the parentheses around the "authz" parameter(ıÑ”?8¥ü„ûÒ1
+m
+java:S1128"KRemove this unused import 'org.springframework.security.config.Customizer'.(Ïóœ¬ùÿÿÿÿ8½Ñ‡ûÒ1
+‘
+java:S1128"oRemove this unused import 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity'.(ŸÜÑıÿÿÿÿ8¾Ñ‡ûÒ1
+•
+java:S1128
+"sRemove this unused import 'org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer'.(†×¥ªüÿÿÿÿ8¾Ñ‡ûÒ1
+}
+java:S1128"[Remove this unused import 'org.springframework.web.servlet.config.annotation.EnableWebMvc'.(Â°Ä¡úÿÿÿÿ8¿Ñ‡ûÒ1
