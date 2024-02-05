@@ -11,7 +11,34 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-
+<build>
+    <plugins>
+    <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.6.0</version>
+        <executions>
+            <execution>
+                <id>run-gradle</id>
+                <phase>generate-sources</phase>
+                <goals>
+                    <goal>exec</goal>
+                </goals>
+                <configuration>
+                    <executable>gradle</executable>
+                    <workingDirectory>/auth-service-v1</workingDirectory>
+                    <!-- Arguments to Gradle if needed -->
+                    <arguments>
+                        <!-- Arguments to pass to Gradle command, e.g., clean build -->
+                        <argument>clean</argument>
+                        <argument>build</argument>
+                    </arguments>
+                </configuration>
+            </execution>
+        </executions>
+    </plugin>
+    </plugins>
+</build>
 
 
     <groupId>com.domain.expansion</groupId>
@@ -19,6 +46,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
+        <module>auth-service-v1</module>
         <module>product-service</module>
         <module>order-service</module>
         <module>inventory-service</module>
@@ -52,5 +80,9 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+
+
+
 
 </project>
