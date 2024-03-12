@@ -4,6 +4,6 @@ java:S6437&"6Revoke and change this password, as it is compromised.(ùªêÆ8ĞèİşÒ
 O
 java:S16110"2Remove the parentheses around the "auth" parameter(ûñŠé8ÔèİşÒ1
 I
-java:S16020",Remove useless curly braces around statement(ûñŠé8ÕèİşÒ1
+java:S16020",Remove useless curly braces around statement(ûñŠé8ñÆåÒÓ1
 u
 java:S1128"XRemove this unused import 'org.springframework.security.config.Customizer.withDefaults'.(ÃÒş†8ÖèİşÒ1

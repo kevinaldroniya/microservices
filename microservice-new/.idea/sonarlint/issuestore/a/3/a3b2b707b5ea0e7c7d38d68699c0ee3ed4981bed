@@ -1,3 +1,5 @@
 
-X
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÛëçÓÓ1
+k
+java:S1172 "IRemove these unused method parameters "orderRequest", "runtimeException".(îÁ»…øÿÿÿÿ8áëçÓÓ1

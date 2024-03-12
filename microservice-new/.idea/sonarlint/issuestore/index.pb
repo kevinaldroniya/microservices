@@ -49,11 +49,9 @@ C
 api-gateway/pom.xml,2\b\2bfa2b108f2439e99e004f4085b58c22cf995f73
 „
 Tapi-gateway/src/main/java/com/domain/expansion/apigateway/ApiGatewayApplication.java,1\6\16629942f8b50576900badcb9165d62508455884
-d
-4api-gateway/src/main/java/config/SecurityConfig.java,f\0\f07d3c9fb8a3df4e05c5413d704bbfff3d4adfbd
-i
-9discovery-server/src/main/java/config/SecurityConfig.java,7\9\7974dce29168e02b77c6a006e5071b8219267b17
 Ž
 ^discovery-server/src/main/java/com/domain/expansion/discoveryserver/config/SecurityConfig.java,6\0\6015553591775b909feba3d5b6417f0dd6dae25a
 „
 Tapi-gateway/src/main/java/com/domain/expansion/apigateway/config/SecurityConfig.java,d\9\d9a085e0486768429185f4682a55b56189195794
+I
+prometheus/prometheus.yml,2\1\2195c72987a6b3f2c1afeaf7568ad8d407cc8eb8
